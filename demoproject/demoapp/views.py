@@ -14,12 +14,11 @@ def multiply(request,a,b):
     return HttpResponse(ans)
 
 def divide(request,a,b):
-    ans=str(a*b)
-<<<<<<< HEAD
-    return HttpResponse(ans)
-=======
-    return HttpResponse(ans)
+    try:
+        ans=str(a/b)
+        return HttpResponse(ans)
+    except:
+        return HttpResponse("Cannot Divide by 0")
 
 def calculate(request,eq):
     return HttpResponse(eval(eq))
->>>>>>> 9ee21c79b3207db043b101b95e3030ca2df62d55
