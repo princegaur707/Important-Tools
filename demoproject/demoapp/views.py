@@ -14,5 +14,8 @@ def multiply(request,a,b):
     return HttpResponse(ans)
 
 def divide(request,a,b):
-    ans=str(a*b)
+    ans=str(a/b)
     return HttpResponse(ans)
+
+def calculate(request,eq):
+    return HttpResponse(eval(eq))
